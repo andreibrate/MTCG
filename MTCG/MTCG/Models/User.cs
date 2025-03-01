@@ -42,8 +42,10 @@ namespace MTCG.Models
         public string Username { get; set; } // unique
         public string Password { get; set; } // hashed
         public int Coins { get; set; }
-        public Stack { get; set; } = new Stack();   // all cards a user owns
-        public Deck { get; set; } = new Deck();     // best 4 cards
-        public Stats { get; set; } = new Stats();
+        public Stack Stack { get; set; } = new Stack();   // all cards a user owns
+        public Deck Deck { get; set; } = new Deck();     // best 4 cards
+        public Stats Stats { get; set; } = new Stats();
+        public string? Bio { get; set; }   // can be missing (null)
+        public string? Image { get; set; } // can be missing (null)
     }
 }
