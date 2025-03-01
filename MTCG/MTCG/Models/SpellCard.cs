@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MTCG.Models
 {
-    internal class SpellCard : Card
+    public class SpellCard : Card
     {
         public SpellCard(string name, double damage, Element elementType, CardType cardType) : base(name, damage, elementType, cardType)
         {
