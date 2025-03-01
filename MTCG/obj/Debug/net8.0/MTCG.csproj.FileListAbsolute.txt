@@ -1,14 +1,5 @@
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\bin\Debug\net8.0\MTCG.exe
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\bin\Debug\net8.0\MTCG.deps.json
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\bin\Debug\net8.0\MTCG.runtimeconfig.json
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\bin\Debug\net8.0\MTCG.dll
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\bin\Debug\net8.0\MTCG.pdb
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.GeneratedMSBuildEditorConfig.editorconfig
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.AssemblyInfoInputs.cache
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.AssemblyInfo.cs
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.csproj.CoreCompileInputs.cache
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.dll
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\refint\MTCG.dll
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.pdb
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.genruntimeconfig.cache
-E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\ref\MTCG.dll
+E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.sourcelink.json
