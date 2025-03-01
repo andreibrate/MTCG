@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace MTCG.Enums
 {
-    internal class Tribes
-    {
-        public enum Tribe
+    public enum Tribe
         {
             Goblin = 0,
             Dragon,
@@ -18,5 +16,4 @@ namespace MTCG.Enums
             Kraken,
             Elf
         }
-    }
 }
