@@ -9,6 +9,18 @@ namespace MTCG.Models
 {
     public class Trading
     {
+        // default ctor (for serialization)
+        public Trading()
+        {
+            Id = Guid.NewGuid();
+            TradedCard = null;               // default
+            TradedCardId = null;             // default
+            WantedElement = Element.Normal;  // default, basic element
+            WantedTribe = Tribe.Goblin;      // default, weakest tribe
+            WantedMinDamage = 0;
+        }
+
+
         // ctor for new trade
         public Trading(Guid? id, Card? tradedCard, Element wantedElement, Tribe wantedTribe, float wantedMinDamage)
         {
