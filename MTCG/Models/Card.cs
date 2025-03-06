@@ -15,7 +15,7 @@ namespace MTCG.Models
         public Element Element { get; set; }
         public CardType CardType { get; set; }
         public Guid OwnerId { get; set; }
-        public bool isLocked { get; set; }
+        public bool IsLocked { get; set; }
 
 
         protected Card(string name, double damage, Element element, CardType cardType, Guid ownerId)
@@ -26,7 +26,7 @@ namespace MTCG.Models
             this.Element = element;
             this.CardType = cardType;
             this.OwnerId = ownerId;
-            this.isLocked = false;
+            this.IsLocked = false;
         }
 
     }
