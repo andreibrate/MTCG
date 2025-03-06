@@ -1,8 +1,31 @@
-﻿// See https://aka.ms/new-console-template for more information
-using MTCG.Models;
+﻿using MTCG.Http.Endpoints;
+using MTCG.Http;
+// Data Access Layer
+// Business Logic Layer
+using System;
+using System.Net;
+using System.Threading;
+// using Npgsql;
 
-Console.WriteLine("Hello, World!");
+
+using MTCG.Http;
+
+namespace MTCG
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Starting...");
+
+            // initialize connection string for DB connection
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=mtcgdb";
+            // Initialize the Http Server
+            HttpServer? server = null;
 
 
-var user = new User { Username = "John Doe" };
-Console.WriteLine($"Name: {user.Username}");
+        }
+    }
+}
+
+
