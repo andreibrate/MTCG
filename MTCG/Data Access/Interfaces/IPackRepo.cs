@@ -9,8 +9,12 @@ namespace MTCG.Data_Access.Interfaces
 {
     public interface IPackRepo
     {
-        List<Card> GetPackByUserId(Guid userId);
-        bool AddCardToPack(Guid userId, IEnumerable<Guid> cardIds);
-        bool RemoveCardFromPack(Guid userId, IEnumerable<Guid> cardIds);
+        Guid? GetAdminId();
+        List<Card>? GetAvailablePackage();
+        bool AddPackage(Package package);
+        int GetAvailablePackageCount();
+        List<Card> GetCardsByIds(Guid[] cardIds);
+        void DeletePackageById(Guid packageId);
+        bool TransferOwnership(List<Card> cards, Guid newOwnerId);
     }
 }
