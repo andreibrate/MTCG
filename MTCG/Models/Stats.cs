@@ -16,6 +16,14 @@ namespace MTCG.Models
             Losses = 0;
         }
 
+        // constructor, load stats from DB
+        public Stats(int Elo, int Wins, int Losses)
+        {
+            this.Elo = Elo;
+            this.Wins = Wins;
+            this.Losses = Losses;
+        }
+
         public int Elo { get; set; } // Elo rating for leaderboard
         public int Wins { get; set; }
         public int Losses { get; set; }
