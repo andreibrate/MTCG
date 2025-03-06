@@ -45,7 +45,7 @@ namespace MTCG.Http
             }
             HttpVersion = firstLineParts?[2] ?? "";
 
-            // 1.2 read the HTTP-headers (in HTTP after the first line, until the empy line)
+            // 1.2 read the HTTP-headers (in HTTP after the first line, until the empty line)
             int content_length = 0; // we need the content_length later, to be able to read the HTTP-content
             while ((line = reader.ReadLine()) != null)
             {
