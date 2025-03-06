@@ -9,7 +9,7 @@ namespace MTCG.Models
 {
     public class MonsterCard : Card
     {
-        public Tribe Tribe { get; }
+        public Tribe Tribe { get; set; }
 
         public MonsterCard(string name, double damage, Element element, Tribe tribe, Guid? ownerId) 
             : base(name, damage, element, CardType.Monster, ownerId ?? Guid.NewGuid())
