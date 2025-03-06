@@ -11,6 +11,6 @@ namespace MTCG.Data_Access.Interfaces
     {
         List<Card> GetDeckByUserId(Guid userId);
         bool AddCardToDeck(Guid userId, IEnumerable<Guid> cardIds);
-        bool RemoveCardFromDeck(Guid userId, IEnumerable<Guid> cardIds);
+        bool RemoveCardsFromDeck(Guid userId, IEnumerable<Guid> cardIds);
     }
 }
