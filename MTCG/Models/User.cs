@@ -38,6 +38,38 @@ namespace MTCG.Models
             Image = string.Empty;
         }
 
+        // constructor for loading a user from DB (except image and bio)
+        public User(Guid id, string username, string password, int coins, string token, int elo, int wins, int losses)
+        {
+            this.Id = id;
+            this.Username = username;
+            this.Password = password;
+            this.Coins = coins;
+            this.Token = token;
+            this.Stack = new Stack();   // Stack of all cards the user owns
+            this.Deck = new Deck();     // Best 4 cards selected by the user for battles
+            this.Stats = new Stats(elo, wins, losses);
+            this.Bio = string.Empty;
+            this.Image = string.Empty;
+        }
+
+        // constructor for loading a user from DB (all attributes, including image and bio)
+        public User(Guid id, string username, string password, int coins, string token, int elo, int wins, int losses, string? bio, string? image)
+        {
+            this.Id = id;
+            this.Username = username;
+            this.Password = password;
+            this.Coins = coins;
+            this.Token = token;
+            this.Stack = new Stack();   // Stack of all cards the user owns
+            this.Deck = new Deck();     // Best 4 cards selected by the user for battles
+            this.Stats = new Stats(elo, wins, losses);
+            this.Bio = bio ?? string.Empty;
+            this.Image = image ?? string.Empty;
+        }
+
+
+
         public Guid Id { get; set; }
         public string Username { get; set; } // unique
         public string Password { get; set; } // hashed
@@ -47,5 +79,6 @@ namespace MTCG.Models
         public Stats Stats { get; set; } = new Stats();
         public string? Bio { get; set; }   // can be missing (null)
         public string? Image { get; set; } // can be missing (null)
+        public string? Token { get; set; } = string.Empty; // for authentication
     }
 }

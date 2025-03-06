@@ -7,9 +7,6 @@ using System.Net;
 using System.Threading;
 // using Npgsql;
 
-
-using MTCG.Http;
-
 namespace MTCG
 {
     class Program
