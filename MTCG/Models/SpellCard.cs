@@ -9,8 +9,8 @@ namespace MTCG.Models
 {
     public class SpellCard : Card
     {
-        public SpellCard(string name, double damage, Element elementType, Guid? ownerId) 
-            : base(name, damage, elementType, CardType.Spell, ownerId ?? Guid.NewGuid())
+        public SpellCard(string name, double damage, Element element, Guid? ownerId) 
+            : base(name, damage, element, CardType.Spell, ownerId ?? Guid.NewGuid())
         {
         }
     }

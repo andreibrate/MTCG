@@ -11,8 +11,8 @@ namespace MTCG.Models
     {
         public Tribe Tribe { get; }
 
-        public MonsterCard(string name, double damage, Element elementType, Tribe tribe, Guid? ownerId) 
-            : base(name, damage, elementType, CardType.Monster, ownerId ?? Guid.NewGuid())
+        public MonsterCard(string name, double damage, Element element, Tribe tribe, Guid? ownerId) 
+            : base(name, damage, element, CardType.Monster, ownerId ?? Guid.NewGuid())
         {
             this.Tribe = tribe;
         }
