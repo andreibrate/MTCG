@@ -42,5 +42,35 @@ namespace MTCG.Http
             tcpListener = new TcpListener(ip, port);
         }
 
+        public void Run()
+        {
+            tcpListener.Start();
+            Console.WriteLine($"Server is running on {ip}:{port}");
+
+            while (!cts.Token.IsCancellationRequested)
+            {
+                if (tcpListener.Pending())
+                {
+                    // ----- 0. Accept the TCP-Client and create the reader and writer -----
+                    var clientSocket = tcpListener.AcceptTcpClient();
+                    var httpProcessor = new HttpProcessor(this, clientSocket);
+                    // ThreadPool for multiple threads
+                    ThreadPool.QueueUserWorkItem(o => httpProcessor.Process());
+                }
+                Thread.Sleep(100); // reduce CPU load
+            }
+        }
+
+        public void Stop()
+        {
+            cts.Cancel();
+            tcpListener.Stop();
+            Console.WriteLine("Server has been stopped.");
+        }
+
+        public void RegisterEndpoint(string path, IHttpEndpoint endpoint)
+        {
+            Endpoints.Add(path, endpoint);
+        }
     }
 }
