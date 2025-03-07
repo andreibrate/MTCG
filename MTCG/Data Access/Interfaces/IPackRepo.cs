@@ -10,11 +10,11 @@ namespace MTCG.Data_Access.Interfaces
     public interface IPackRepo
     {
         Guid? GetAdminId();
+        List<Card> GetCardsByIds(Guid[] cardIds);
+        void DeletePackageById(Guid packageId);
         List<Card>? GetAvailablePackage();
         bool AddPackage(Package package);
         int GetAvailablePackageCount();
-        List<Card> GetCardsByIds(Guid[] cardIds);
-        void DeletePackageById(Guid packageId);
         bool TransferOwnership(List<Card> cards, Guid newOwnerId);
     }
 }
