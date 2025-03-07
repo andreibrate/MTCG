@@ -3,3 +3,4 @@ E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.AssemblyInfoInputs
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.AssemblyInfo.cs
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.csproj.CoreCompileInputs.cache
 E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.sourcelink.json
+E:\FH\Semester 3\1. SWEN\MTCG\MTCG\MTCG\obj\Debug\net8.0\MTCG.csproj.AssemblyReference.cache
