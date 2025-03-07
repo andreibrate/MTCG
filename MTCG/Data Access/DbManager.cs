@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace MTCG.Data_Access
 {
-    internal static class DbManager
+    public static class DbManager
     {
         public static void InitializeDatabase(string connectionString)
         {
