@@ -12,9 +12,9 @@ namespace MTCG.Data_Access.Interfaces
         bool RegisterUser(string username, string password);
         User? LoginUser(string username, string password);
         User? GetUserByToken(string token);
-        void UpdateUser(User user);
         List<User> GetUsers();
         List<User> GetUsersStartingWith(string prefix);
+        void UpdateUser(User user);
         IEnumerable<(string Username, Stats Stats)> GetScoreboardStats();
     }
 }
