@@ -8,7 +8,7 @@ using MTCG.Models;
 
 namespace MTCG.Business_Logic
 {
-    internal class UserHandler
+    public class UserHandler
     {
         private readonly IUserRepo _userRepo;
 
