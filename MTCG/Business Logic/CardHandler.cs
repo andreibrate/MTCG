@@ -9,7 +9,7 @@ using MTCG.Data_Access.Interfaces;
 
 namespace MTCG.Business_Logic
 {
-    internal class CardHandler
+    public class CardHandler
     {
         private readonly ICardRepo _cardRepo;
 
