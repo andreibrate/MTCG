@@ -10,7 +10,7 @@ using MTCG.Data_Access.Interfaces;
 
 namespace MTCG.Data_Access
 {
-    internal class PackRepo : IPackRepo
+    public class PackRepo : IPackRepo
     {
         private readonly string _connectionString;
         public PackRepo(string connectionString)
