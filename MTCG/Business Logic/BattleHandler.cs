@@ -15,12 +15,12 @@ namespace MTCG.Business_Logic
         private readonly ICardRepo _cardRepo;
         private readonly BattleSpecialConditions _specialConditions;
 
-        public BattleHandler(IUserRepo userRepo, IDeckRepo deckRepo, ICardRepo cardRepo, BattleSpecialConditions specialConditions)
+        public BattleHandler(IUserRepo userRepo, IDeckRepo deckRepo, ICardRepo cardRepo)
         {
             _userRepo = userRepo;
             _deckRepo = deckRepo;
             _cardRepo = cardRepo;
-            _specialConditions = specialConditions;
+            _specialConditions = new BattleSpecialConditions();
         }
 
         public (string Winner, string Loser) StartBattle(string player1Token, string player2Token)
