@@ -10,7 +10,7 @@ namespace MTCG.Data_Access.Interfaces
     public interface IDeckRepo
     {
         List<Card> GetDeckByUserId(Guid userId);
-        bool AddCardToDeck(Guid userId, IEnumerable<Guid> cardIds);
+        bool UpdateDeck(Guid userId, IEnumerable<Guid> cardIds);
         bool RemoveCardsFromDeck(Guid userId, IEnumerable<Guid> cardIds);
     }
 }
