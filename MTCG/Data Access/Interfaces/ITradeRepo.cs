@@ -9,9 +9,9 @@ namespace MTCG.Data_Access.Interfaces
 {
     public interface ITradeRepo
     {
-        List<Trading> GetTrades();
-        Trading? GetTradeById(Guid tradeId);
         void AddTrade(Trading trade);
+        Trading? GetTradeById(Guid tradeId);
         void DeleteTrade(Guid tradeId);
+        List<Trading> GetTrades();
     }
 }
