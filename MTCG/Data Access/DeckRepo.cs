@@ -60,7 +60,7 @@ namespace MTCG.Data_Access
             return cards;
         }
 
-        public bool AddCardToDeck(Guid userId, IEnumerable<Guid> cardIds)
+        public bool UpdateDeck(Guid userId, IEnumerable<Guid> cardIds)
         {
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();
