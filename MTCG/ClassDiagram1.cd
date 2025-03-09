@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MTCG.Business_Logic.BattleHandler" Collapsed="true">
+    <Position X="20" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAIQgAAAAAAAAAAAAAAAAABEAA=</HashCode>
+      <FileName>Business Logic\BattleHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.BattleSpecialConditions" Collapsed="true">
+    <Position X="23.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAgAAAAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Business Logic\BattleSpecialConditions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.CardHandler" Collapsed="true">
+    <Position X="27" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAgAAQAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Business Logic\CardHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.DeckHandler" Collapsed="true">
+    <Position X="25.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAASkAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business Logic\DeckHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.PackHandler" Collapsed="true">
+    <Position X="27" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Business Logic\PackHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.ScoreboardHandler" Collapsed="true">
+    <Position X="21.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Business Logic\ScoreboardHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.TradeHandler" Collapsed="true">
+    <Position X="21.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAQAAAAAgBAAgAAAAAAAAAAAAAAACAAUgA=</HashCode>
+      <FileName>Business Logic\TradeHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.TransactionHandler" Collapsed="true">
+    <Position X="28.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAAAgA=</HashCode>
+      <FileName>Business Logic\TransactionHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Business_Logic.UserHandler" Collapsed="true">
+    <Position X="21.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACAAAIAAAQAAAEgAABAAUARAAAAAAAAAAAAAAEAU=</HashCode>
+      <FileName>Business Logic\UserHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Data_Access.CardRepo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAgA=</HashCode>
+      <FileName>Data Access\CardRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Data_Access.DbManager" Collapsed="true">
+    <Position X="20" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Access\DbManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Data_Access.DeckRepo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAABAAAACAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Data Access\DeckRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Data_Access.PackRepo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAEAAAAAAAAAAAAAAAAAAECCAAMAQAAAAAAAAA=</HashCode>
+      <FileName>Data Access\PackRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Data_Access.TradeRepo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAgAAAAQAAAAAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Data Access\TradeRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Data_Access.UserRepo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAAEAQAAAAAAAAAAAAAQAAAgAIAACAAAAAAAE=</HashCode>
+      <FileName>Data Access\UserRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.BattleEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAIAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\BattleEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.CardEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\CardEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.Converter" Collapsed="true">
+    <Position X="18.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAAAAAAAAQAAAAgAAAAAAAAAAAASAA=</HashCode>
+      <FileName>Http\Endpoints\Converter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.DeckEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAABAIAAAAAAAAAAAAAAABAAAAIAAAAA=</HashCode>
+      <FileName>Http\Endpoints\DeckEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.PackEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\PackEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.ScoreboardEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\ScoreboardEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.SessionsEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\SessionsEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.StatsEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\StatsEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.TradeEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAAAAAAAAABAABAgAAAAAAAAAAAAAAAAAAAAAABACA=</HashCode>
+      <FileName>Http\Endpoints\TradeEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.TransactionEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Http\Endpoints\TransactionEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.Endpoints.UserEP" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAUAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\UserEP.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MTCG.Http.BattleQueue" Collapsed="true">
+    <Position X="21.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Http\BattleQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Http.HttpProcessor" Collapsed="true">
+    <Position X="28.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAABAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\HttpProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Http.HttpRequest" Collapsed="true">
+    <Position X="18.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAgAAAAIAAAAgAAAACAAAAAAAAAAAAAQQBAA=</HashCode>
+      <FileName>Http\HttpRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Http.HttpResponse" Collapsed="true">
+    <Position X="20" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAAgAAAAAAAEAAABAICAAAAAAAIQAABAQAAAA=</HashCode>
+      <FileName>Http\HttpResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Http.HttpServer" Collapsed="true">
+    <Position X="21.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEBAAAAAAAAAAAgAIAAgEAAAAAI=</HashCode>
+      <FileName>Http\HttpServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Http.StreamTracer" Collapsed="true">
+    <Position X="18.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\StreamTracer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.Card" Collapsed="true">
+    <Position X="2.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCACIAAAAAAAAAAgAAAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.Deck" Collapsed="true">
+    <Position X="21.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAQAAAAAAAAIEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.MonsterCard" Collapsed="true">
+    <Position X="1" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MonsterCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.Package" Collapsed="true">
+    <Position X="23.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.SpellCard" Collapsed="true">
+    <Position X="3.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SpellCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.Stack" Collapsed="true">
+    <Position X="25.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAQAAAAAAAAIEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Stack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.Stats" Collapsed="true">
+    <Position X="27" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAA=</HashCode>
+      <FileName>Models\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.Trading" Collapsed="true">
+    <Position X="25.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAEAAAAAAAAAAAAAAAAAAAAABAABACAAAAAAA=</HashCode>
+      <FileName>Models\Trading.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Models.User" Collapsed="true">
+    <Position X="18.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAAAAAAACQAACAAAgAAAABACAABAAAABAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MTCG.Program">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MTCG.Data_Access.Interfaces.ICardRepo" Collapsed="true">
+    <Position X="18.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Data Access\Interfaces\ICardRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MTCG.Data_Access.Interfaces.IDeckRepo" Collapsed="true">
+    <Position X="20" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAABAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Access\Interfaces\IDeckRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MTCG.Data_Access.Interfaces.IPackRepo" Collapsed="true">
+    <Position X="23.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAEAAAAAAAAAAAAAAAAAAECCAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Data Access\Interfaces\IPackRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MTCG.Data_Access.Interfaces.ITradeRepo" Collapsed="true">
+    <Position X="25.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAgAAAAQAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Data Access\Interfaces\ITradeRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MTCG.Data_Access.Interfaces.IUserRepo" Collapsed="true">
+    <Position X="27" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAAAAQAAAAAAAAAAAAAQAAAgAAAACAAAAAAAE=</HashCode>
+      <FileName>Data Access\Interfaces\IUserRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MTCG.Http.Endpoints.IHttpEndpoint" Collapsed="true">
+    <Position X="21.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\Endpoints\IHttpEndpoint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MTCG.Enums.CardType" Collapsed="true">
+    <Position X="18.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAAAAAA=</HashCode>
+      <FileName>Enums\CardType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MTCG.Enums.Element" Collapsed="true">
+    <Position X="20" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Element.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MTCG.Enums.Tribe" Collapsed="true">
+    <Position X="23.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAABgAAAAAAAAAIAAAgAAIIAAAAAAA=</HashCode>
+      <FileName>Enums\Tribe.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MTCG.Http.HttpMethod" Collapsed="true">
+    <Position X="21.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAEAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Http\HttpMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
