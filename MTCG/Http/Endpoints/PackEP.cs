@@ -39,7 +39,7 @@ namespace MTCG.Http.Endpoints
 
                 try
                 {
-                    // Deserialize the content into a Package object
+                    // Deserialize the content into a Pack object
                     var pack = JsonConvert.DeserializeObject<List<Card>>(rq.Content, new JsonSerializerSettings
                     {
                         TypeNameHandling = TypeNameHandling.None,
@@ -53,7 +53,7 @@ namespace MTCG.Http.Endpoints
                         return true;
                     }
 
-                    // Add the package to the repository via the PackHandler
+                    // Add the pack to the repository via the PackHandler
                     bool success = _packHandler.CreatePack(pack);
 
                     if (success)

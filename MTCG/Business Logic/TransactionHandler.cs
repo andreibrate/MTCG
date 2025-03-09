@@ -39,10 +39,10 @@ namespace MTCG.Business_Logic
             List<Card>? cards = _packRepo.GetAvailablePack();
             if (cards == null)
             {
-                return (false, null, "No packages available for purchase");
+                return (false, null, "No packs available for purchase");
             }
 
-            // add all cards from package to user stack in DB
+            // add all cards from pack to user stack in DB
             Console.WriteLine($"Card currently owned by {cards.First().OwnerId}");
             var transferSuccess = _packRepo.TransferOwnership(cards, user.Id);
             if (!transferSuccess)
@@ -54,7 +54,7 @@ namespace MTCG.Business_Logic
             // subtract coin cost from user
             if (!_userHandler.SpendCoins(user, packCost))
             {
-                return (false, null, "Not enough money to buy the package"); // Too poor
+                return (false, null, "Not enough money to buy the pack"); // Too poor
             }
 
             // pack return successful

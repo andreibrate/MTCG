@@ -233,7 +233,7 @@ namespace MTCG.Data_Access
                     reader.GetGuid(0),                  // Trade ID
                     card,
                     (Element)reader.GetInt32(9),        // WantedElement
-                    (Tribe)reader.GetInt32(10),         // WantedSpecies
+                    (Tribe)reader.GetInt32(10),         // WantedTribe
                     reader.GetFloat(11)                 // WantedMinDamage
                 ));
             }

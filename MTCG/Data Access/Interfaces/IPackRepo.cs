@@ -11,9 +11,9 @@ namespace MTCG.Data_Access.Interfaces
     {
         Guid? GetAdminId();
         List<Card> GetCardsByIds(Guid[] cardIds);
-        void DeletePackById(Guid packageId);
+        void DeletePackById(Guid packId);
         List<Card>? GetAvailablePack();
-        bool AddPack(Package package);
+        bool AddPack(Package pack);
         int GetAvailablePackCount();
         bool TransferOwnership(List<Card> cards, Guid newOwnerId);
     }

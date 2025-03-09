@@ -34,7 +34,7 @@ namespace MTCG.Http.Endpoints
 
                 try
                 {
-                    // Call the Business Logic to handle purchasing a package
+                    // Call the Business Logic to handle purchasing a pack
                     var (isSuccess, pack, errorMessage) = _transactionHandler.BuyPack(token);
 
                     if (isSuccess && pack != null)

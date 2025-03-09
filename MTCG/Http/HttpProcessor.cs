@@ -29,13 +29,14 @@ namespace MTCG.Http
             using var writer = new StreamWriter(clientSocket.GetStream()) { AutoFlush = true };
             var response = new HttpResponse(writer);
 
+            // Console.WriteLine(string.Join(",",httpServer.Endpoints.Keys));
             var endpoint = httpServer.Endpoints.ContainsKey(request.Path[1]) ? httpServer.Endpoints[request.Path[1]] : null;
             if (endpoint == null || !endpoint.HandleRequest(request, response))
             {
                 //Thread.Sleep(10000);
                 response.ResponseCode = 404;
                 response.ResponseMessage = "Not Found";
-                response.Content = "<html><body>Not found!</body></html>";
+                response.Content = "Not found!";
                 response.Headers.Add("Content-Type", "text/html");
             }
 

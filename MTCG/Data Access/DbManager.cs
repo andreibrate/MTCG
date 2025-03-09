@@ -37,14 +37,14 @@ namespace MTCG.Data_Access
                                 Id UUID PRIMARY KEY,
                                 Name VARCHAR(50) NOT NULL,
                                 Damage FLOAT NOT NULL,
-                                ElementType INT NOT NULL,
+                                Element INT NOT NULL,
                                 Tribe INT DEFAULT 0,
                                 CardType INT NOT NULL,
                                 OwnerId UUID NOT NULL REFERENCES Users(Id),
                                 IsLocked BOOLEAN DEFAULT FALSE
                             );
 
-                            CREATE TABLE IF NOT EXISTS Packages (
+                            CREATE TABLE IF NOT EXISTS Packs (
                                 Id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
                                 CardIds UUID[] NOT NULL
                             );
@@ -91,8 +91,8 @@ namespace MTCG.Data_Access
                                 IF EXISTS (SELECT FROM pg_tables WHERE tablename = 'users') THEN
                                     EXECUTE 'TRUNCATE TABLE Users RESTART IDENTITY CASCADE';
                                 END IF;
-                                IF EXISTS (SELECT FROM pg_tables WHERE tablename = 'packages') THEN
-                                    EXECUTE 'TRUNCATE TABLE Packages RESTART IDENTITY CASCADE';
+                                IF EXISTS (SELECT FROM pg_tables WHERE tablename = 'packs') THEN
+                                    EXECUTE 'TRUNCATE TABLE Packs RESTART IDENTITY CASCADE';
                                 END IF;
                                 IF EXISTS (SELECT FROM pg_tables WHERE tablename = 'decks') THEN
                                     EXECUTE 'TRUNCATE TABLE Decks RESTART IDENTITY CASCADE';

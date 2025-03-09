@@ -37,8 +37,8 @@ namespace MTCG.Business_Logic
                 card.OwnerId = adminId.Value; // set admin as owner
             }
 
-            var package = new Package(cards);
-            return _packRepo.AddPackage(package);
+            var pack = new Package(cards);
+            return _packRepo.AddPack(pack);
         }
     }
 }

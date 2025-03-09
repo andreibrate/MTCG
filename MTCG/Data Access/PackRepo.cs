@@ -100,14 +100,14 @@ namespace MTCG.Data_Access
             return cards;
         }
 
-        public void DeletePackById(Guid packageId)
+        public void DeletePackById(Guid packId)
         {
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();
 
             using var command = connection.CreateCommand();
-            command.CommandText = "DELETE FROM Packages WHERE Id = @Id;";
-            command.Parameters.AddWithValue("@Id", packageId);
+            command.CommandText = "DELETE FROM Packs WHERE Id = @Id;";
+            command.Parameters.AddWithValue("@Id", packId);
 
             command.ExecuteNonQuery();
         }
@@ -118,26 +118,26 @@ namespace MTCG.Data_Access
             connection.Open();
 
             using var command = connection.CreateCommand();
-            command.CommandText = "SELECT Id, CardIds FROM Packages LIMIT 1;";  // get first pack available
+            command.CommandText = "SELECT Id, CardIds FROM Packs LIMIT 1;";  // get first pack available
 
             using var reader = command.ExecuteReader();
             if (reader.Read())
             {
-                var packageId = reader.GetGuid(0);              // UUID column from Id
+                var packId = reader.GetGuid(0);              // UUID column from Id
                 var cardIds = reader.GetFieldValue<Guid[]>(1);  // UUID-Array column from CardIds
 
                 var cards = GetCardsByIds(cardIds);
 
-                Console.WriteLine($"Package {packageId} found with cards:");
+                Console.WriteLine($"Pack {packId} found with cards:");
                 foreach (var card in cards)
                 {
                     Console.WriteLine($"Card {card.Id}, OwnerId: {card.OwnerId}");
                 }
-                DeletePackById(packageId);   // remove it from available list
+                DeletePackById(packId);   // remove it from available list
                 return cards;
             }
 
-            return null;  // no packages available
+            return null;  // no packs available
         }
 
         public void AddCard(Card card, NpgsqlConnection connection)
@@ -172,10 +172,10 @@ namespace MTCG.Data_Access
             command.ExecuteNonQuery();
         }
 
-        public bool AddPack(Package package)
+        public bool AddPack(Package pack)
         {
             // all packs have exactly 5 cards (no more, no less)
-            if (package.Cards.Count != 5)
+            if (pack.Cards.Count != 5)
             {
                 throw new InvalidOperationException("All packs contain exactly 5 cards (no more, no less)");
             }
@@ -186,14 +186,14 @@ namespace MTCG.Data_Access
             using var transaction = connection.BeginTransaction();
             try
             {
-                foreach (var card in package.Cards)
+                foreach (var card in pack.Cards)
                 {
                     AddCard(card, connection);
                 }
 
-                var cardIds = package.Cards.Select(card => card.Id).ToArray();
+                var cardIds = pack.Cards.Select(card => card.Id).ToArray();
                 using var command = connection.CreateCommand();
-                command.CommandText = "INSERT INTO Packages (CardIds) VALUES (@CardIds);";
+                command.CommandText = "INSERT INTO Packs (CardIds) VALUES (@CardIds);";
                 command.Parameters.AddWithValue("@CardIds", cardIds);
 
                 command.ExecuteNonQuery();
@@ -207,14 +207,14 @@ namespace MTCG.Data_Access
             }
         }
 
-        // Check how many packages are available
+        // Check how many packs are available
         public int GetAvailablePackCount()
         {
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();
 
             using var command = connection.CreateCommand();
-            command.CommandText = "SELECT COUNT(*) FROM Packages;";
+            command.CommandText = "SELECT COUNT(*) FROM Packs;";
 
             return Convert.ToInt32(command.ExecuteScalar());
         }

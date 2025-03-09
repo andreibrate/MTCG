@@ -38,8 +38,8 @@ namespace MTCG.Http.Endpoints
                 ? (Tribe)jsonObject["Tribe"]!.Value<int>()
                 : GetTribeFromName(name);
 
-            var element = jsonObject["ElementType"]?.Value<int>() != null
-                ? (Element)jsonObject["ElementType"]!.Value<int>()
+            var element = jsonObject["Element"]?.Value<int>() != null
+                ? (Element)jsonObject["Element"]!.Value<int>()
                 : GetElementFromName(name);
 
             // create card based on type
