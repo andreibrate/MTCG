@@ -22,53 +22,53 @@ namespace MTCG.Http.Endpoints
         {
             if (rq.Method == HttpMethod.POST)
             {
-                // Admin should be able to add packages
+                // Admin should be able to add packs
                 // Verify if the request is authorized
                 var authHeader = rq.Headers["Authorization"];
                 if (authHeader == null || authHeader != "Bearer admin-mtcgToken")
                 {
-                    rs.SetClientError("Unauthorized: Only admin can create packages", 403);
+                    rs.SetClientError("Unauthorized: Only admin can create packs", 403);
                     return true;
                 }
 
                 if (string.IsNullOrWhiteSpace(rq.Content))
                 {
-                    rs.SetClientError("Package data is missing or invalid", 400);
+                    rs.SetClientError("Pack data is missing or invalid", 400);
                     return true;
                 }
 
                 try
                 {
-                    // Deserialize the content into a CardPackage object
+                    // Deserialize the content into a Package object
                     var pack = JsonConvert.DeserializeObject<List<Card>>(rq.Content, new JsonSerializerSettings
                     {
                         TypeNameHandling = TypeNameHandling.None,
                         Converters = { new Converter() }
                     });
 
-                    // Validate the package
+                    // Validate the pack
                     if (pack == null || pack.Count != 5)
                     {
-                        rs.SetClientError("A package must contain exactly 5 cards", 400);
+                        rs.SetClientError("A pack must contain exactly 5 cards", 400);
                         return true;
                     }
 
-                    // Add the package to the repository via the PackageHandler
+                    // Add the package to the repository via the PackHandler
                     bool success = _packHandler.CreatePack(pack);
 
                     if (success)
                     {
-                        rs.SetSuccess("Package created successfully", 201);
+                        rs.SetSuccess("Pack created successfully", 201);
                     }
                     else
                     {
-                        rs.SetServerError("Failed to save the package");
+                        rs.SetServerError("Failed to save the pack");
                     }
                 }
                 catch (JsonException ex)
                 {
                     // Catch deserialization errors
-                    rs.SetClientError($"Failed to deserialize package: {ex.Message}", 400);
+                    rs.SetClientError($"Failed to deserialize pack: {ex.Message}", 400);
                 }
                 catch (Exception ex)
                 {

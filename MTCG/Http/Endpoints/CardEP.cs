@@ -43,7 +43,7 @@ namespace MTCG.Http.Endpoints
 
                     // retrieve user cards
                     var cards = _cardHandler.GetUserCards(user.Id);
-                    Console.WriteLine($"User {user.Id} has {cards.Count()} cards.");
+                    Console.WriteLine($"User {user.Id} has {cards.Count()} cards");
                     foreach (var card in cards)
                     {
                         Console.WriteLine($"Card: {card.Id}, Name: {card.Name}, OwnerId: {card.OwnerId}");

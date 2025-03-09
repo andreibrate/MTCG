@@ -59,18 +59,16 @@ namespace MTCG
                 var serverThread = new Thread(() => server.Run());
 
                 // register endpoints for http server
-
-                //TODO:
-                //server.RegisterEndpoint("users", new UsersEndpoint(userHandler));                       // Registers Endpoint for user registration
-                //server.RegisterEndpoint("sessions", new SessionsEndpoint(userHandler));                 // Registers Endpoint for user login
-                //server.RegisterEndpoint("packages", new PacksEndpoint(packHandler));              // Registers Endpoint for card packs (creating packs)
-                //server.RegisterEndpoint("transactions", new TransactionsEndpoint(transactionHandler));  // Registers Endpoint for transactions regarding card packs
-                //server.RegisterEndpoint("cards", new CardsEndpoint(userHandler, cardHandler));          // Registers Endpoint for card listing
-                //server.RegisterEndpoint("deck", new DeckEndpoint(userHandler, deckHandler));            // Registers Endpoint for managing the user deck
-                //server.RegisterEndpoint("stats", new StatsEndpoint(userHandler));                       // Registers Endpoint for viewing user statistics
-                //server.RegisterEndpoint("scoreboard", new ScoreboardEndpoint(scoreboardHandler));       // Registers Endpoint for viewing the scoreboard
-                //server.RegisterEndpoint("trades", new TradesEndpoint(tradeHandler));              // Registers Endpoint for trading cards
-                //server.RegisterEndpoint("battles", new BattleEndpoint(battleHandler, battleQueue));     // Registers Endpoint for battles between players
+                server.RegisterEndpoint("users", new UserEP(userHandler));                       // Registers Endpoint for user registration
+                server.RegisterEndpoint("sessions", new SessionsEP(userHandler));                // Registers Endpoint for user login
+                server.RegisterEndpoint("packs", new PackEP(packHandler));                       // Registers Endpoint for card packs (creating packs)
+                server.RegisterEndpoint("transactions", new TransactionEP(transactionHandler));  // Registers Endpoint for transactions regarding card packs
+                server.RegisterEndpoint("cards", new CardEP(userHandler, cardHandler));          // Registers Endpoint for card listing
+                server.RegisterEndpoint("deck", new DeckEP(userHandler, deckHandler));           // Registers Endpoint for managing the user deck
+                server.RegisterEndpoint("stats", new StatsEP(userHandler));                      // Registers Endpoint for viewing user statistics
+                server.RegisterEndpoint("scoreboard", new ScoreboardEP(scoreboardHandler));      // Registers Endpoint for viewing the scoreboard
+                server.RegisterEndpoint("trades", new TradeEP(tradeHandler));                    // Registers Endpoint for trading cards
+                server.RegisterEndpoint("battles", new BattleEP(battleHandler, battleQueue));    // Registers Endpoint for battles between players
 
                 // start Server
                 serverThread.Start();
