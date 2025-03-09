@@ -20,7 +20,7 @@ namespace MTCG.Business_Logic
             _packRepo = packRepo;
         }
 
-        public (bool IsSuccessful, List<Card>? BoughtCards, string? ErrorMessage) BuyPackage(string token)
+        public (bool IsSuccessful, List<Card>? BoughtCards, string? ErrorMessage) BuyPack(string token)
         {
             // validate user by token
             var user = _userHandler.FindUserByToken(token);
