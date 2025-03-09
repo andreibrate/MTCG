@@ -70,7 +70,7 @@
             },
             "NUnit": {
               "target": "Package",
-              "version": "[4.2.2, )"
+              "version": "[4.3.2, )"
             },
             "NUnit.Analyzers": {
               "target": "Package",
@@ -78,7 +78,7 @@
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[4.6.0, )"
+              "version": "[5.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -86,7 +86,7 @@
             },
             "Npgsql": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[9.0.3, )"
             },
             "coverlet.collector": {
               "target": "Package",
