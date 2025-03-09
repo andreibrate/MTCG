@@ -100,7 +100,7 @@ namespace MTCG.Data_Access
             return cards;
         }
 
-        public void DeletePackageById(Guid packageId)
+        public void DeletePackById(Guid packageId)
         {
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();
@@ -112,13 +112,13 @@ namespace MTCG.Data_Access
             command.ExecuteNonQuery();
         }
 
-        public List<Card>? GetAvailablePackage()
+        public List<Card>? GetAvailablePack()
         {
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();
 
             using var command = connection.CreateCommand();
-            command.CommandText = "SELECT Id, CardIds FROM Packages LIMIT 1;";  // get first package available
+            command.CommandText = "SELECT Id, CardIds FROM Packages LIMIT 1;";  // get first pack available
 
             using var reader = command.ExecuteReader();
             if (reader.Read())
@@ -133,7 +133,7 @@ namespace MTCG.Data_Access
                 {
                     Console.WriteLine($"Card {card.Id}, OwnerId: {card.OwnerId}");
                 }
-                DeletePackageById(packageId);   // remove it from available list
+                DeletePackById(packageId);   // remove it from available list
                 return cards;
             }
 
@@ -172,7 +172,7 @@ namespace MTCG.Data_Access
             command.ExecuteNonQuery();
         }
 
-        public bool AddPackage(Package package)
+        public bool AddPack(Package package)
         {
             // all packs have exactly 5 cards (no more, no less)
             if (package.Cards.Count != 5)
@@ -208,7 +208,7 @@ namespace MTCG.Data_Access
         }
 
         // Check how many packages are available
-        public int GetAvailablePackageCount()
+        public int GetAvailablePackCount()
         {
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Open();

@@ -8,7 +8,7 @@ using MTCG.Models;
 
 namespace MTCG.Business_Logic
 {
-    internal class TransactionHandler
+    public class TransactionHandler
     {
         private readonly UserHandler _userHandler;
         private readonly IPackRepo _packRepo;
@@ -36,7 +36,7 @@ namespace MTCG.Business_Logic
             }
 
             // check if packs are available
-            List<Card>? cards = _packRepo.GetAvailablePackage();
+            List<Card>? cards = _packRepo.GetAvailablePack();
             if (cards == null)
             {
                 return (false, null, "No packages available for purchase");
