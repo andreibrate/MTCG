@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MTCG.Http
 {
-    internal class HttpRequest
+    public class HttpRequest
     {
         private StreamReader reader;
 

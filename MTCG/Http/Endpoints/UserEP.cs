@@ -10,7 +10,7 @@ using MTCG.Models;
 
 namespace MTCG.Http.Endpoints
 {
-    internal class UserEP : IHttpEndpoint
+    public class UserEP : IHttpEndpoint
     {
         private readonly UserHandler _userHandler;
 
