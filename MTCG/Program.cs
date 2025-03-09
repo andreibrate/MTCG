@@ -23,7 +23,7 @@ namespace MTCG
 
             try
             {
-                Console.WriteLine("=*=*=*=[ Monster Trading Card Game ]=*=*=*=");
+                Console.WriteLine("Starting MTCG...");
 
                 // Initialize DB / connection
                 //#if DEBUG
@@ -105,7 +105,7 @@ namespace MTCG
                 DbManager.CleanupTables(connectionString);
                 //#endif
 
-                Console.WriteLine("... Program End");
+                Console.WriteLine("Program ended");
             }
         }
     }
